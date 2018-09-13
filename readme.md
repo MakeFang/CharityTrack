@@ -2,18 +2,18 @@
 
 A website that makes it easy for people to track the money they give to charity
 
-Resources
+#### Resources
 - users
 - charity
 - donations
 
-Users
+##### Users
 - id
 - Last, first name
 
-Charity (could try Charity Navigator)
+##### Charity (could try Charity Navigator)
 
-donations
+##### donations
 - User id
 - Charity id
 - Amount
@@ -40,6 +40,8 @@ donations
 | users/:userid/donations/:id | PUT | update |
 | users/:userid/donations/:id | DELETE | destroy |
 
+Below is probably not as useful
+Also use is limited 
 
 | Route | Method | Action |
 | --- | --- | --- |
@@ -50,3 +52,14 @@ donations
 | charity/:charityid/donations/:id/edit | GET | edit |
 | charity/:charityid/donations/:id | PUT | update |
 | charity/:charityid/donations/:id | DELETE | destroy |
+
+##### Wireframe
+
+##### Using
+expressjs
+nodejs
+Handlebars
+mongodb
+charityapi
+
+##### how to charity api?
