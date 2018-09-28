@@ -1,0 +1,23 @@
+<!-- views/partials/reviews-form.handlebars -->
+
+<fieldset>
+  <legend>Donations</legend>
+  <!-- Amount -->
+  <div class="form-group">
+    <label for="donations-orgs">{{donation.orgsName}}</label><br>
+    <input class="form-control" id="donations-orgs" type="hidden" name="orgsName" value="{{donation.orgsName}}"/>
+  </div>
+  <div class="form-group">
+    <label for="donations-ein">{{donation.orgsEin}}</label><br>
+    <input class="form-control" id="donations-ein" type="hidden" name="orgsEin" value="{{donation.orgsEin}}"/>
+  </div>
+  <div class="form-group">
+    <label for="donations-amount">Amount</label><br>
+    <input class="form-control" id="donations-amount" type="number" name="amount" value="10"/>
+  </div>
+  <div class="form-group">
+    <label for="donations-notes">Notes</label><br>
+    <textarea class="form-control" id="donations-notes" rows="10" name="notes"/></textarea>
+  </div>
+
+</fieldset>

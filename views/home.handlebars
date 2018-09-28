@@ -1,5 +1,21 @@
 <ul>
     {{#each charities}}
-        <li><a href='{{this.websiteURL}}'>{{this.charityName}}</a></li>
+    <ul class="list-unstyled">
+        <li class="media my-4">
+            <!-- <img class="mr-3" src="https://via.placeholder.com/64x64" alt="Generic placeholder image"> -->
+            <div class="media-body">
+                <h5 class="mt-0 mb-1">{{this.charityName}}</h5>
+                {{this.mission}}
+                <div class="my-auto">
+                <form class="" action="/donations/new" method="get">
+                    <input type="hidden" value="{{this.ein}}" name="orgsEin">
+                    <input type="hidden" value="{{this.charityName}}" name="orgsName">
+                    <!-- <a href="/donations/new" class="btn btn-primary">Donate</a> -->
+                    <button type="submit" class="btn btn-primary">DONATE</button>
+                </form>
+                </div>
+            </div>
+        </li>
+    </ul>
     {{/each}}
 </ul>
