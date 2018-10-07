@@ -1,8 +1,9 @@
 <ul class="list-group">
     {{#each donations}}
         <li class="list-group-item">
-        <p><a href="/donations/{{this._id}}">To: {{this.orgsName}}</a></p>
+        <p>To: <a href="/charities/{{this.orgsEin}}">{{this.orgsName}}</a></p>
         <p>Amount: {{this.amount}}</p>
+        <p><a href="/donations/{{this._id}}">details</a></p>
         </li>
     {{/each}}
 </ul>

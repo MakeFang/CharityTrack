@@ -10,6 +10,7 @@ const charityNavigator = new CharityNavigator(appid, appkey);
 var exphbs = require('express-handlebars');
 
 const donations = require('./controllers/donations.js')
+const charities = require('./controllers/charities.js')
 
 const app = express();
 
@@ -20,24 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-app.get('/', (req, res) => {
-
-    // charityNavigator.orgsEin('010202467').then((body) =>{
-    //     console.log(body);
-    // }).catch((error)=>{
-    //     console.log(error);
-    // })
-    charityNavigator.orgs({ minRating: 4, rated: true, pageSize: 10}).then((body)=>{
-        res.render('home', {charities: body});
-    }).catch((error) => {
-        console.log(error);
-    })
-
-})
-
-app.listen(3000, () => {
-    console.log('App listening on port 3000!');
-})
 donations(app);
+charities(app);
 
 module.exports = app;

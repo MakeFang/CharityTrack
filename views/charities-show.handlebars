@@ -1,0 +1,15 @@
+<!-- <div class="pull-right">
+  <a href="/movies/{{movie.id}}/reviews/new" class="btn btn-primary">New Review</a>
+</div> -->
+
+<div class="row">
+    <div class="col-sm-8">
+        <h1>{{org.charityName}}</h1>
+        <p class="lead">{{org.mission}}</p>
+    </div>
+</div>
+
+<h3>Donations</h3>
+{{#each donations}}
+  {{> donation}}
+{{/each}}

@@ -1,11 +1,13 @@
-<div class="donation-card">
-    <p>Name: {{donation.orgsName}}</p>
-    <p>Ein: {{donation.orgsEin}}</p>
-    <p>Amount: {{donation.amount}}</p>
-    <p>Notes: {{donation.notes}}</p>
-    <p>Donation tracked at: {{donation.createdAt}}</p>
-    <p>Donation updated at: {{donation.updatedAt}}</p>
-    <a href="/donations/{{donation._id}}/edit">EDIT</a>
-    <form method="POST" action="/donations/{{donation._id}}?_method=DELETE">
-    <button class="btn btn-primary" type="submit">Delete</button>
+<div class="donation-card card">
+    <div class="card-body">
+        <p class="card-text">Name: {{donation.orgsName}}</p>
+        <p class="card-text">Ein: {{donation.orgsEin}}</p>
+        <p class="card-text">Amount: {{donation.amount}}</p>
+        <p class="card-text">Notes: {{donation.notes}}</p>
+        <p class="card-text">Donation tracked at: {{donation.createdAt}}</p>
+        <p class="card-text">Donation updated at: {{donation.updatedAt}}</p>
+        <a href="/donations/{{donation._id}}/edit">EDIT</a>
+        <form method="POST" action="/donations/{{donation._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </div>
 </div>
