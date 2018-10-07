@@ -3,6 +3,8 @@
     <p>Ein: {{donation.orgsEin}}</p>
     <p>Amount: {{donation.amount}}</p>
     <p>Notes: {{donation.notes}}</p>
+    <p>Donation tracked at: {{donation.createdAt}}</p>
+    <p>Donation updated at: {{donation.updatedAt}}</p>
     <a href="/donations/{{donation._id}}/edit">EDIT</a>
     <form method="POST" action="/donations/{{donation._id}}?_method=DELETE">
     <button class="btn btn-primary" type="submit">Delete</button>

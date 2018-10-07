@@ -8,6 +8,8 @@ const donation = new Schema({
     orgsName: {type: String, required: true},
     amount: {type: Number, min: 0, required: true},
     notes: String
+}, {
+    timestamps: true
 });
 
 const Donation = mongoose.model('Donation', donation);

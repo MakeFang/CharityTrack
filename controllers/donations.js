@@ -43,7 +43,9 @@ function donations(app){
 
     app.put('/donations/:donationId', (req,res)=>{
         console.log(req.body);
-        Donation.findOneAndUpdate(req.params.donationId, req.body).then((donation)=>{
+        // console.log(req.params.donationId);
+        Donation.findByIdAndUpdate(req.params.donationId, req.body).then((donation)=>{
+            console.log(donation);
             res.redirect(`/donations/${donation._id}`);
         }).catch((err)=>{
             console.log(err.message);
@@ -51,8 +53,8 @@ function donations(app){
     })
 
     app.delete('/donations/:donationId', (req,res)=>{
-        console.log(req.body);
-        Donation.findOneAndRemove(req.params.donationId).then((donation)=>{
+        console.log(`DELETE ${req.params.donationId}`);
+        Donation.findByIdAndRemove(req.params.donationId).then((donation)=>{
             res.redirect(`/donations/`);
         }).catch((err)=>{
             console.log(err.message);
