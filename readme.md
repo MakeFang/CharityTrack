@@ -2,64 +2,40 @@
 
 A website that makes it easy for people to track the money they give to charity
 
-#### Resources
-- users
+## Resources
 - charity
 - donations
 
-##### Users
-- id
-- Last, first name
+#### Charity
+- Using [Charity Navigator API](https://charity.3scale.net/docs/data-api/reference). Its Node.js wrapper is on [npm](https://www.npmjs.com/package/charitynavigator-promise) and [github](https://github.com/kfa408/CharityNavigator).  
 
-##### Charity (could try Charity Navigator)
+#### donations
+- donationId
+- orgsEin: The Ein of the charity organization, as displayed in the Charity Navigator database.
+- orgsName: The name of the charity as it appears on Charity Navigator.
+- amount: The amount donated.
+- notes: Notes about the donation.
+- timestamps
 
-##### donations
-- User id
-- Charity id
-- Amount
-- Date
-
-| Route | Method | Action |
-| --- | --- | --- |
-| users/ | GET | index |
-| users/:id | GET | show |
-| users/new | GET | new |
-| users | POST | create |
-| users/:id/edit | GET | edit |
-| users/:id | PUT | update |
-| users/:id | DELETE | destroy |
-
+## Routes
 
 | Route | Method | Action |
 | --- | --- | --- |
-| users/:userid/donations | GET | index |
-| users/:userid/donations/:id | GET | show |
-| users/:userid/donations/new | GET | new |
-| users/:userid/donations | POST | create |
-| users/:userid/donations/:id/edit | GET | edit |
-| users/:userid/donations/:id | PUT | update |
-| users/:userid/donations/:id | DELETE | destroy |
-
-Below is probably not as useful
-Also use is limited 
+| /donations | GET | index |
+| /donations/:id | GET | show |
+| /donations/new | GET | new |
+| /donations | POST | create |
+| /donations/:id/edit | GET | edit |
+| /donations/:id | PUT | update |
+| /donations/:id | DELETE | destroy |
 
 | Route | Method | Action |
 | --- | --- | --- |
-| charity/:charityid/donations | GET | index |
-| charity/:charityid/donations/:id | GET | show |
-| charity/:charityid/donations/new | GET | new |
-| charity/:charityid/donations | POST | create |
-| charity/:charityid/donations/:id/edit | GET | edit |
-| charity/:charityid/donations/:id | PUT | update |
-| charity/:charityid/donations/:id | DELETE | destroy |
+| / | GET | index |
+| charity/:charityId | GET | show |
 
-##### Wireframe
-
-##### Using
-expressjs
-nodejs
-Handlebars
-mongodb
-charityapi
-
-##### how to charity api?
+## Using
+Express.js
+Node.js
+Handlebars.js
+MongoDB
