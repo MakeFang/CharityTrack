@@ -13,7 +13,8 @@ function charities(app){
         // }).catch((error)=>{
         //     console.log(error);
         // })
-        charityNavigator.orgs({ minRating: 4, rated: true, pageSize: 10}).then((body)=>{
+        searchTerm = req.query['search-term'] || '';
+        charityNavigator.orgs({ minRating: 4, rated: true, pageSize: 10, search: searchTerm}).then((body)=>{
             res.render('home', {charities: body});
         }).catch((error) => {
             console.log(error);

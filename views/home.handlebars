@@ -1,4 +1,12 @@
-<ul>
+<form action="/" class="input-group" method="get">
+    <div class="input-group">
+        <input class="form-control" id="search-term" type="text" name="search-term">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </span>
+    </div>
+</form>
+<ul class="list-unstyled">
     {{#each charities}}
     <ul class="list-unstyled">
         <li class="media my-4">
