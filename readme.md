@@ -3,10 +3,10 @@
 A website that makes it easy for people to track the money they give to charity
 
 ## Resources
-- charity
+- charities
 - donations
 
-#### Charity
+#### Charities
 - Using [Charity Navigator API](https://charity.3scale.net/docs/data-api/reference). Its Node.js wrapper is on [npm](https://www.npmjs.com/package/charitynavigator-promise) and [github](https://github.com/kfa408/CharityNavigator).  
 
 #### Donations
@@ -35,7 +35,7 @@ A website that makes it easy for people to track the money they give to charity
 | charity/:charityId | GET | show |
 
 ## Using
-Express.js
-Node.js
-Handlebars.js
+Express.js,
+Node.js,
+Handlebars.js,
 MongoDB
