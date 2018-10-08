@@ -9,7 +9,7 @@ A website that makes it easy for people to track the money they give to charity
 #### Charity
 - Using [Charity Navigator API](https://charity.3scale.net/docs/data-api/reference). Its Node.js wrapper is on [npm](https://www.npmjs.com/package/charitynavigator-promise) and [github](https://github.com/kfa408/CharityNavigator).  
 
-#### donations
+#### Donations
 - donationId
 - orgsEin: The Ein of the charity organization, as displayed in the Charity Navigator database.
 - orgsName: The name of the charity as it appears on Charity Navigator.
