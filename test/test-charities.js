@@ -9,6 +9,15 @@ chai.use(chaiHttp);
 let testEin = '010202467';
 
 describe('Charities', ()=>{
+    it('Should get all the charities', (done)=>{
+        chai.request(server)
+        .get('/')
+        .end((err, res)=>{
+            res.should.have.status(200);
+            res.should.be.html;
+            done();
+        });
+    });
     it('Should get a single charity by ein GET', (done)=>{
         chai.request(server)
         .get(`/charities/${testEin}`)

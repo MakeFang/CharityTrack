@@ -33,7 +33,7 @@ describe('Donations', ()=>{
         //index
         it('Should get all the donations', (done)=>{
             chai.request(server)
-            .get('/')
+            .get('/donations')
             .end((err, res)=>{
                 res.should.have.status(200);
                 res.should.be.html;
