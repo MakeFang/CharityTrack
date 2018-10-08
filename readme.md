@@ -2,6 +2,8 @@
 
 A website that makes it easy for people to track the money they give to charity
 
+This project is on [heroku](https://tranquil-forest-11881.herokuapp.com/).
+
 ## Resources
 - charities
 - donations
